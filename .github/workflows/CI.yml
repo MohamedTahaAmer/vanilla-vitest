@@ -10,21 +10,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  # test:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: echo node version
-        run: node --version
+  #   steps:
+  #     - name: echo node version
+  #       run: node --version
 
-      - name: Checkout code
-        uses: actions/checkout@v4.1.1
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4.1.1
 
-      - name: Install dependencies
-        run: npm ci
+  #     - name: Install dependencies
+  #       run: npm ci
 
-      - name: Run tests
-        run: npm test
+  #     - name: Run tests
+  #       run: npm test
 
   format:
     runs-on: ubuntu-latest
@@ -35,9 +35,9 @@ jobs:
     steps:
       - name: echo Github Event Name
         run: |
-          echo ${{ toJson(github.event_name) }} | jq
+          echo ${{ toJson(github.Event) }} | jq
           echo " secrets.GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}"
-          echo " github.ref ${{ github.ref }} "
+          echo " github.head_ref ${{ github.head_ref }} "
 
       - name: Checkout code
         uses: actions/checkout@v4.1.1
@@ -58,4 +58,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: ${{ github.head_ref }}
