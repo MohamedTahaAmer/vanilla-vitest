@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: "echo Github Event Name"
-        run: echo "${{ toJSON(github.event) }}" | jq
+        run: echo "${{ toJSON(github.event) }}"
 
       - name: Checkout code
         uses: actions/checkout@v4.1.1
