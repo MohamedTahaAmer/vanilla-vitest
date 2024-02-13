@@ -9,8 +9,8 @@
 		"preview": "vite preview",
 		"test": "vitest --coverage",
 		"format": "prettier --write .",
-		"lint": "eslint --fix .",
-		"tsc": "tsc --noEmit"
+		"lint": "eslint --fix --max-warnings=0 .",
+		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.56.2",
