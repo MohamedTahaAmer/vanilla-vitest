@@ -9,7 +9,7 @@ import { sum } from "./sum"
 
 describe("#sum", () => {
 	it("should add two numbers", () => {
-		expect(sum(1, 2)).toBe(3)
+		expect(sum(1, 3)).toBe(4)
 	})
 	it("should be zero for no arguments", () => {
 		expect(sum()).toBe(0)
