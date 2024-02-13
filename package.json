@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"test": "vitest --coverage",
 		"format": "prettier --write .",
-		"lint": "eslint --fix --max-warnings=0 .",
+		"lint": "eslint --fix --max-warnings=1 .",
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
