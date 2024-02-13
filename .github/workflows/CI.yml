@@ -33,6 +33,12 @@ jobs:
       pull-requests: write # 'write' access to pull requests
 
     steps:
+      - name: echo Github Event Name
+        run: |
+          echo ${{ toJson(github.event_name) }} | jq
+          echo " secrets.GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}"
+          echo " github.ref ${{ github.ref }} "
+
       - name: Checkout code
         uses: actions/checkout@v4.1.1
 
@@ -44,8 +50,8 @@ jobs:
 
       - name: Commit Formatted Files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "MohamedTahaaAmer@gmail.com"
+          git config --local user.name "MohamedTahaAmer"
           git add .
           git commit -m "Format code"
       - name: Push changes
