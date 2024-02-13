@@ -47,8 +47,8 @@ jobs:
 
       - name: Commit Formatted Files
         run: |
-          git config --local user.email "MohamedTahaaAmer@gmail.com"
-          git config --local user.name "MohamedTahaAmer"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Format code"
       - name: Push changes
