@@ -1,0 +1,15 @@
+# test:
+#   runs-on: ubuntu-latest
+
+#   steps:
+#     - name: echo node version
+#       run: node --version
+
+#     - name: Checkout code
+#       uses: actions/checkout@v4.1.1
+
+#     - name: Install dependencies
+#       run: npm ci
+
+#     - name: Run tests
+#       run: npm test
