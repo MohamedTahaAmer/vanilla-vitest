@@ -28,6 +28,9 @@ jobs:
 
   format:
     runs-on: ubuntu-latest
+    permissions: # Job-level permissions configuration starts here
+      contents: write # 'write' access to repository contents
+      pull-requests: write # 'write' access to pull requests
 
     steps:
       - name: Checkout code
@@ -38,3 +41,15 @@ jobs:
 
       - name: Run format
         run: npm run format
+
+      - name: Commit Formatted Files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Format code"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
