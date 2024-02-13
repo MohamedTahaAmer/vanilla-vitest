@@ -12,7 +12,8 @@ if (import.meta.vitest) {
 	})
 }
 
-let c = undefined
+let _c = "str"
+_c = 2
 // let d = c || 0
 
 const _newObject = {
