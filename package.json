@@ -8,13 +8,21 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"test": "vitest --coverage",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"lint": "eslint --fix .",
+		"tsc": "tsc --noEmit"
 	},
 	"devDependencies": {
+		"@types/eslint": "^8.56.2",
+		"@typescript-eslint/eslint-plugin": "^7.0.1",
+		"@typescript-eslint/parser": "^7.0.1",
 		"@vitest/coverage-v8": "^1.2.2",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"prettier": "^3.2.5",
 		"typescript": "^5.3.3",
 		"vite": "^5.1.1",
-		"vitest": "^1.2.2",
-		"prettier": "^3.2.5"
+		"vite-plugin-eslint": "^1.8.1",
+		"vitest": "^1.2.2"
 	}
 }

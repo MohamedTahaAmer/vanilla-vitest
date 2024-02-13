@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitest/config'
+import eslint from 'vite-plugin-eslint'
 export default defineConfig({
 	// not include the testing code when running 'npm run build'
 	define: {
@@ -13,4 +14,5 @@ export default defineConfig({
 			reporter: ['text', 'json', 'html'],
 		},
 	},
+	plugins: [eslint()],
 })

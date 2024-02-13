@@ -15,12 +15,21 @@
 
 		/* Linting */
 		"strict": true,
-		"noUnusedLocals": true,
+		"noUnusedLocals": false,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-
+		"noUncheckedIndexedAccess": true,
 		/* Optional - Test along code*/
-		"types": ["vitest/importMeta"],
+		"types": ["vitest/importMeta"]
 	},
-	"include": ["src"],
+
+	"exclude": ["node_modules", "coverage", "vite.config.ts"],
+	"include": [
+		"src",
+		".eslintrc.cjs",
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.cjs",
+		"**/*.js"
+	]
 }
