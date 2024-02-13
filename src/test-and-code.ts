@@ -11,3 +11,5 @@ if (import.meta.vitest) {
 		})
 	})
 }
+
+let _c = "str"
