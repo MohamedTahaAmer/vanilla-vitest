@@ -35,9 +35,8 @@ jobs:
     steps:
       - name: echo Github Event Name
         run: |
-          echo ${{ toJson(github.Event) }} | jq
-          echo " secrets.GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}"
-          echo " github.head_ref ${{ github.head_ref }} "
+          echo "${{ toJson(github.event) }}" | jq
+          echo "github.head_ref: ${{ github.head_ref }}"
 
       - name: Checkout code
         uses: actions/checkout@v4.1.1
