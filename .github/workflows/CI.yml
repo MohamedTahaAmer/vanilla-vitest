@@ -45,6 +45,11 @@ jobs:
       - name: Run format
         run: npm run format
 
+        # if there are no changes, exit with 0, so the workflow doesn't fail, and without adding a commit
+      - name: Check for changes
+        run: |
+          git diff --exit-code || exit 0
+
       - name: Commit Formatted Files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
