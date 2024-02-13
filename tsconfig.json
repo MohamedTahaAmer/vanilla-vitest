@@ -20,7 +20,7 @@
 		"noFallthroughCasesInSwitch": true,
 
 		/* Optional - Test along code*/
-		"types": ["vitest/importMeta"]
+		"types": ["vitest/importMeta"],
 	},
-	"include": ["src"]
+	"include": ["src"],
 }
