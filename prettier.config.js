@@ -4,7 +4,7 @@ const config = {
 	jsxSingleQuote: false,
 	useTabs: true,
 	semi: false,
-	trailingComma: 'all',
+	trailingComma: "all",
 }
 
 export default config
