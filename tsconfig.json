@@ -24,12 +24,5 @@
 	},
 
 	"exclude": ["node_modules", "coverage", "vite.config.ts"],
-	"include": [
-		"src",
-		".eslintrc.cjs",
-		"**/*.ts",
-		"**/*.tsx",
-		"**/*.cjs",
-		"**/*.js"
-	]
+	"include": ["src", ".eslintrc.cjs", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.js"]
 }
