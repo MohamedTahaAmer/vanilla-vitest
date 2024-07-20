@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, test } from "vitest"
 import { sum } from "./sum"
 
 // - Why Vitest over Jest?
@@ -8,7 +8,8 @@ import { sum } from "./sum"
 // 4- integrates will with vite
 
 describe("#sum", () => {
-	it("should add two numbers", () => {
+	// it or test is the same, we use describe to group bunch of tests together
+	test("should add two numbers", () => {
 		expect(sum(1, 3)).toBe(4)
 		expect(sum(1, 3)).not.toBe(0)
 
