@@ -5,6 +5,7 @@ const config = {
 	useTabs: true,
 	semi: false,
 	trailingComma: "all",
+	printWidth: 140,
 }
 
 export default config

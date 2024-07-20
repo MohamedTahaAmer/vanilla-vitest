@@ -10,6 +10,10 @@ import { sum } from "./sum"
 describe("#sum", () => {
 	it("should add two numbers", () => {
 		expect(sum(1, 3)).toBe(4)
+		expect(sum(1, 3)).not.toBe(0)
+
+		// this is used to compare arrays and objects that are the same but have different references
+		expect(sum(1, 3)).toEqual(4)
 	})
 	it("should be zero for no arguments", () => {
 		expect(sum()).toBe(0)
