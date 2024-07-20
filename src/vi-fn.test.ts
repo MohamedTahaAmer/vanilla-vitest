@@ -23,9 +23,11 @@ describe("vi-fn", () => {
 		expect(multiplyByTwo(2)).toEqual(4)
 		// 4- you can check if the function was called and how many
 		// without 'vitest.mock' the function itself will be imported and executed, unlike with this implementation, our overwrite to the './utils/logic' is the one that will be used
-		expect(convertToNumber).toHaveBeenCalledTimes(3)
+		// in here we are checking if the function was called 4 times, although we only called it 3 times, this is because for the first time we call the mocked function, Vitest will call it anonymously to track it first, then apply our calls, so you just add one, if you will never call it in this 'it' or any other, then the vitest won't call the function anonymously, so you should expect it to be called 0 times in this case
+		expect(convertToNumber).toHaveBeenCalledTimes(4)
 	})
 	it("should multiply by two for strings", () => {
 		expect(multiplyByTwo("2")).toBe(4)
+		expect(convertToNumber).toHaveBeenCalledTimes(5)
 	})
 })
