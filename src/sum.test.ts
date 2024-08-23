@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { sum } from "./sum"
+import { sum, unique } from "./sum"
 
 // - Why Vitest over Jest?
 // 1- Vitest is faster than Jest
@@ -22,5 +22,17 @@ describe("#sum", () => {
 	})
 	it("should add single number", () => {
 		expect(sum(1)).toBe(1)
+	})
+})
+
+describe("#unique", () => {
+	it("should remove duplicates", () => {
+		expect(unique([1, 2, 2, 3, 3, 3])).toEqual([1, 2, 3])
+	})
+	it("should return empty array for empty array", () => {
+		expect(unique([])).toEqual([])
+	})
+	it("should return single element array for single element array", () => {
+		expect(unique([1])).toEqual([1])
 	})
 })
